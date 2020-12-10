@@ -1,0 +1,79 @@
+{
+	"id": "29633f68-365a-44d1-83d5-004e7deee4c9",
+	"values": [
+		{
+			"key": "hrurl",
+			"value": "54.161.137.82:1000/ords/hr",
+			"enabled": false
+		},
+		{
+			"key": "spartanurl",
+			"value": "54.161.137.82:8000",
+			"enabled": false
+		},
+		{
+			"key": "apikey",
+			"value": "$2a$10$d3b1cWpkGkYbiuSuzV3kCOSwWmL9sKaFUvzH.JDLhZY7F613EJHua",
+			"enabled": false
+		},
+		{
+			"key": "my_secret_token",
+			"value": "",
+			"enabled": false
+		},
+		{
+			"key": "id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "age",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "name",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "salary",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "newAge",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "newName",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "newSalary",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "newEmployeeId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "updateName",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "updateId",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-12-10T19:50:24.794Z",
+	"_postman_exported_using": "Postman/7.36.0"
+}
