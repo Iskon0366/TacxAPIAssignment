@@ -67,6 +67,8 @@ And It runs and gives a CLI result from terminal.
 * I wrote a script to install htmlextra reporter and run the collection inside the Jenkins.  
   
 ```npm install -g newman-reporter-htmlextra```
+
+
 ```newman run "TacxAPI.postman_collection.json" -e "environment.json" -g "globals.json" -r htmlextra```
 
 * I added ```Publish HTML Reporter``` as a ```Post-build Actions``` and configure the name, 
