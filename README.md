@@ -14,12 +14,12 @@ Tools | Purpose
 ------------ | -------------
 POSTMAN | Manual and automated execution of requests and/or collections. 
 Github | VCS
-Newman | Command-line collection runner, supports to easly integrate with CI tools
+Newman | Command-line collection runner, supports to easily integrate with CI tools
 Newman reporter htmlextra | Updated version of the standard HTML reporter containing a more in-depth data output
 
-### Design and cration of framework in steps :
+### Design and creation of framework in steps :
 
-#### In POSTAN
+#### In POSTMAN
 I created **environment** to use in every request in POSTMAN as below. 
 
 Environment name : Tacx
@@ -32,7 +32,8 @@ BaseURL | http://dummy.restapiexample.com/api/v1 | http://dummy.restapiexample.c
 * I created some global variables using ```Pre-request Script``` and I also created some variables in ```Tests``` and I created assertions inside ```Tests```.
 * I run them and save one by one in a collection.
 * After completed writing API requests, I run the collection easily
-* I can share my collection via a link via POSTMAN.[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/333e72b19df0060d28fd)
+* I share my collection via Postman link, you may take and run the collection. [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/333e72b19df0060d28fd) 
+* In order to run this collection you may download the project as zip file from github and take environment.json file -> In Postman : Manage Environment -> Update -> Import this .json file as an environment.
 
 
 **After completed the collection I exported my collection in local computer as ```json``` format in a folder. ```TacxAPI.postman_collection.json```**
@@ -45,7 +46,7 @@ BaseURL | http://dummy.restapiexample.com/api/v1 | http://dummy.restapiexample.c
 #### Newman
 * I installed the newman -> ```npm install -g newman``` from terminal.
 * I installed the newman-reporter-htmlextra -> ```npm install -g newman-reporter-htmlextra``` from terminal.
-* Go that folder holding .json files and run the command -> ```newman run "TacxAPI.postman_collection.json" e "environment.json" -g "globals.json" -r htmlextra```
+* Go that folder holding .json files and run the command -> ```newman run "TacxAPI.postman_collection.json" -e "environment.json" -g "globals.json" -r htmlextra```
 
 And It runs and gives a CLI result from terminal.
 
@@ -56,7 +57,7 @@ And It runs and gives a CLI result from terminal.
   * -> Manage Plugins and install NodeJS Plugin
   * -> Install Cucumber Reports
   * -> Install HTML Publisher Plugin
-* I went to Global Tool Configuration and add a new NodeJS, made it's name ```NodeJS```, ```version``` is ```14.0.0``` and made the ```Global npm packages to install``` -> ```npm install -g newman``` to install newman in Jenkins and ```SAVE``` it.
+* I went to Global Tool Configuration and add a new NodeJS, made its name ```NodeJS```, ```version``` is ```14.0.0``` and made the ```Global npm packages to install``` -> ```npm install -g newman``` to install newman in Jenkins and ```SAVE``` it.
 * Create a freestyle job and save.
 * Provide the Github link and branch name.
 * In ```Build Environment```, ```Provide Node & npm bin/ folder to PATH``` is selected And :
