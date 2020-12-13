@@ -32,7 +32,7 @@ BaseURL | http://dummy.restapiexample.com/api/v1 | http://dummy.restapiexample.c
 * I created some global variables using ```Pre-request Script``` and I also created some variables in ```Tests``` and I created assertions inside ```Tests```.
 * I run them and save one by one in a collection.
 * After completed writing API requests, I run the collection easily
-* I share my collection via Postman link, you may take and run the collection. [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/333e72b19df0060d28fd) 
+* I share my collection via Postman link, you may take and run the collection. [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/333e72b19df0060d28fd#?env%5BTacx%5D=W3sia2V5IjoiQmFzZVVSTCIsInZhbHVlIjoiaHR0cDovL2R1bW15LnJlc3RhcGlleGFtcGxlLmNvbS9hcGkvdjEiLCJlbmFibGVkIjp0cnVlfV0=)
 * In order to run this collection you may download the project as zip file from github and take environment.json file -> In Postman : Manage Environment -> Update -> Import this .json file as an environment.
 
 
