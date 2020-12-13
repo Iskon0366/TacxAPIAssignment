@@ -189,9 +189,20 @@
 			"name": "PUT Update An Employee",
 			"event": [
 				{
+					"listen": "prerequest",
+					"script": {
+						"id": "206d6596-c816-4e99-99fb-fca896a0fe64",
+						"exec": [
+							"pm.globals.set(\"updateName\", \"update\");",
+							"pm.globals.set(\"updateSalary\", \"123\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
 					"listen": "test",
 					"script": {
-						"id": "e6d5688c-3be5-4229-8a0e-5aa2eb5b2022",
+						"id": "3a31fb28-29ae-42ba-9d12-2a9fb47cd1c0",
 						"exec": [
 							"pm.test(\"Successful PUT request\", function () {",
 							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
@@ -209,20 +220,13 @@
 							"    pm.expect(jsonData.message).to.include(\"updated\");",
 							"});",
 							"",
-							"pm.test(\"Verify name\", function () {",
+							"pm.test(\"Verify name is changed\", function () {",
 							"    pm.expect(jsonData.data.name).to.eql(pm.globals.get(\"updateName\"));",
+							"});",
+							"",
+							"pm.test(\"Verify salary is changed\", function () {",
+							"    pm.expect(jsonData.data.salary).to.eql(pm.globals.get(\"updateSalary\"));",
 							"});"
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "f6f6ca99-091b-4872-b91c-78b3a7a2ede3",
-						"exec": [
-							"pm.globals.set(\"updateName\", \"update\");",
-							"pm.globals.set(\"updateId\", \"123\");"
 						],
 						"type": "text/javascript"
 					}
@@ -233,7 +237,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"{{updateName}}\"\n}",
+					"raw": "{\n    \"name\":\"{{updateName}}\",\n    \"salary\":\"{{updateSalary}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
