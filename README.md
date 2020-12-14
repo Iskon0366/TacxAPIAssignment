@@ -3,7 +3,7 @@
 ##  Short descreption about the framework :
 
 
-It was the second option to run API Collection framework. And it was more effective, fast and easy to maintain.
+It was the second option to run API Collection framework.
 
 
 First I created the requests in **POSTMAN** using ```GET```, ```POST```, ```PUT```, ```DEL``` for the **CRUD** methods. I create a collection from these requests and save them as a single line of execution / end to end structure. I downloaded and used [Newman](https://www.npmjs.com/package/newman) to run that collection from my terminal. Then I push my collection to the **Github** account. And I used **Jenkins** with the help of the **Newman** to execute whole collection from the github and generate a fancy report.
